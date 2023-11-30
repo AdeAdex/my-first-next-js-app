@@ -1,0 +1,14 @@
+[
+        {
+          "id": 1,
+          "title": "Breaking News 1",
+          "content": "This is the first breaking news.",
+          "date": "2023-01-01"
+        },
+        {
+          "id": 2,
+          "title": "Latest Update",
+          "content": "An update on recent events.",
+          "date": "2023-02-15"
+        }
+      ]
