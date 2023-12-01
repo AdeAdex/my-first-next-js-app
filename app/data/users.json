@@ -1,12 +1,64 @@
-[
-        {
-          "id": 1,
-          "name": "John Doe",
-          "email": "john@example.com"
-        },
-        {
-          "id": 2,
-          "name": "Jane Doe",
-          "email": "jane@example.com"
-        }
-      ]
+{
+  "allUsers": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "username": "john_doe",
+      "email": "john@example.com"
+    },
+    {
+      "id": 2,
+      "name": "Jane Doe",
+      "username": "jane_doe",
+      "email": "jane@example.com"
+    },
+    {
+      "id": 3,
+      "name": "Alice Smith",
+      "username": "alice_smith",
+      "email": "alice@example.com"
+    },
+    {
+      "id": 4,
+      "name": "Bob Johnson",
+      "username": "bob_johnson",
+      "email": "bob@example.com"
+    },
+    {
+      "id": 5,
+      "name": "Eva Davis",
+      "username": "eva_davis",
+      "email": "eva@example.com"
+    },
+    {
+      "id": 6,
+      "name": "Chris Wilson",
+      "username": "chris_wilson",
+      "email": "chris@example.com"
+    },
+    {
+      "id": 7,
+      "name": "Olivia Taylor",
+      "username": "olivia_taylor",
+      "email": "olivia@example.com"
+    },
+    {
+      "id": 8,
+      "name": "Daniel Brown",
+      "username": "daniel_brown",
+      "email": "daniel@example.com"
+    },
+    {
+      "id": 9,
+      "name": "Sophia Miller",
+      "username": "sophia_miller",
+      "email": "sophia@example.com"
+    },
+    {
+      "id": 10,
+      "name": "David Anderson",
+      "username": "david_anderson",
+      "email": "david@example.com"
+    }
+  ]
+}
