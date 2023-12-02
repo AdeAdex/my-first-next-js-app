@@ -1,3 +1,5 @@
+// app/user/page.jsx
+
 "use client"
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
@@ -11,7 +13,7 @@ const UserPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        await new Promise((resolve) => setTimeout(resolve, 3000));
+        await new Promise((resolve) => setTimeout(resolve, 1000));
         const fetchedUsers = await displayUsers();
         setUsers(fetchedUsers.allUsers);
       } catch (error) {
@@ -25,17 +27,17 @@ const UserPage = () => {
   }, []);
 
   return (
-    <main>
+    <main className="h-screen">
       {loading ? (
         <Loading />
       ) : (
         <div>
         <h2 className="text-center my-10">Users</h2>
         <div className="flex w-full justify-center">
-          <div className="flex flex-wrap w-1/2">
+          <div className="flex flex-wrap w-1/2 justify-between">
             {users &&
               users.map((eachUser, index) => (
-                <Link key={index} className="w-1/2 my-5" href={`/user/${eachUser.username}`}>
+                <Link key={index} className="my-5 shadow shadow-lg bg-blue-500 rounded-sm p-4" style={{width: '30%'}} href={`/user/${eachUser.username}`}>
                   <div className="">
                     <div>{eachUser.id}</div>
                     <div>{eachUser.name}</div>
