@@ -41,9 +41,9 @@ const UserPage = ({ params }) => {
 
   return (
     <div className="w-full h-screen">
-      <h2 className="text-center my-12">User Details</h2>
+      <h2 className="text-center py-24">User Details</h2>
       {user && (
-        <div className="flex flex-col w-1/4 mx-auto shadow rounded-sm bg-blue-500 p-4">
+        <div className="flex flex-col w-11/12 lg:w-1/4 mx-auto shadow rounded-sm bg-blue-500 p-4">
           <h2 className="my-4">UserID: {user.id}</h2>
           <div className="flex gap-20">
             <span className="w-1/12">UserName:</span> {user.username}

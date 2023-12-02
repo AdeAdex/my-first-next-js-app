@@ -9,8 +9,8 @@ import { FiMenu } from "react-icons/fi";
 
 
 const Navbar = () => {
-  const { width } = useWindowSize();
   const [showDropdown, setShowDropdown] = useState(false);
+  const { width } = useWindowSize();
   const isMobile = width <= 600;
   
   const toggleDropdown = () => {
