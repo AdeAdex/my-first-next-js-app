@@ -16,12 +16,25 @@
   }
 }
 
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    to bottom,
+    #00132e,
+    #002651,
+    #004073,
+    #005295,
+    #0064b7,
+    #0076d9,
+    #0088fb,
+    #0099ff,
+    #0088fb, 
+    #0076d9, 
+    #0064b7, 
+    #005295,
+    #004073,
+    #002651,
+    #00132e
+  );
 }
