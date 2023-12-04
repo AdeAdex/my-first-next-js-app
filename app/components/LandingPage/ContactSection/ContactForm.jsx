@@ -1,15 +1,9 @@
 "use client"
 import React from "react";
 import { useFormik } from "formik";
-import * as Yup from "yup";
+import validationSchema from "@/app/lib/validationSchema";
 
-const validationSchema = Yup.object({
-  name: Yup.string().required("Your Name is required"),
-  email: Yup.string()
-    .email("Invalid email address")
-    .required("Your Email is required"),
-  message: Yup.string().required("Your Message is required"),
-});
+
 
 const ContactForm = () => {
   const formik = useFormik({
