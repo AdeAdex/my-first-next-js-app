@@ -3,7 +3,7 @@ import ContactForm from "./ContactForm";
 
 const ContactSection = () => {
   return (
-    <section className="container mx-auto mt-8 p-8">
+    <section className="container mx-auto mt-8 p-8 lg:px-32">
       <h2 className="text-3xl font-bold text-white mb-4">Contact Us</h2>
       <ContactForm />
     </section>
