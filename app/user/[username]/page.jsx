@@ -10,7 +10,7 @@ export const dynamicParams = true;
 const UserPage = ({ params }) => {
   const username = params.username;
   const [user, setUser] = useState(null);
-  const [response, setResponse] = useState(true)
+  const [response, setResponse] = useState(true);
 
   const getUserDetails = async () => {
     const users = await displayUsers();
@@ -18,41 +18,42 @@ const UserPage = ({ params }) => {
     return ourUser;
   };
 
-
   useEffect(() => {
     const fetchData = async () => {
       const userDetails = await getUserDetails();
 
       if (!userDetails) {
-        setResponse(false)
-      } 
+        setResponse(false);
+      }
       if (response === false) {
-        notFound()
+        notFound();
       } else {
         setUser(userDetails);
       }
-
     };
-
-    
 
     fetchData();
   }, [username]);
 
   return (
-    <div className="w-full h-screen">
-      <h2 className="text-center py-24">User Details</h2>
+    <div className="container w-full h-screen mx-auto py-24 px-4">
+      <h2 className="text-3xl font-bold text-center mb-8 text-orange-300">
+        User Details
+      </h2>
       {user && (
-        <div className="flex flex-col w-11/12 lg:w-1/4 mx-auto shadow rounded-sm bg-blue-500 p-4">
-          <h2 className="my-4">UserID: {user.id}</h2>
-          <div className="flex gap-20">
-            <span className="w-1/12">UserName:</span> {user.username}
+        <div className="flex flex-col w-full md:w-2/3 lg:w-1/2 xl:w-1/3 mx-auto shadow-lg rounded-md bg-white p-6">
+          <h2 className="text-lg font-semibold mb-4">UserID: {user.id}</h2>
+          <div className="flex flex-col mb-4">
+            <span className="text-gray-600 mb-1">UserName:</span>
+            <span className="text-indigo-800">{user.username}</span>
           </div>
-          <div className="flex gap-20">
-            <span className="w-1/12">Name:</span> {user.name}
+          <div className="flex flex-col mb-4">
+            <span className="text-gray-600 mb-1">Name:</span>
+            <span className="text-indigo-800">{user.name}</span>
           </div>
-          <div className="flex gap-20">
-            <span className="w-1/12">Email:</span> {user.email}
+          <div className="flex flex-col mb-4">
+            <span className="text-gray-600 mb-1">Email:</span>
+            <span className="text-indigo-800">{user.email}</span>
           </div>
         </div>
       )}
@@ -61,4 +62,3 @@ const UserPage = ({ params }) => {
 };
 
 export default UserPage;
-

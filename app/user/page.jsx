@@ -1,12 +1,11 @@
 // app/user/page.jsx
 
-"use client"
+"use client";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import Loading from "../loading";
 import { displayUsers } from "../utils/displayData";
 import useWindowSize from "../utils/useWindowSize";
-
 
 const UserPage = () => {
   const [users, setUsers] = useState([]);
@@ -31,28 +30,28 @@ const UserPage = () => {
   }, []);
 
   return (
-    <main className="h-screen">
+    <main className="min-h-screen bg-gray-100">
       {loading ? (
         <Loading />
       ) : (
-        <div>
-        <h2 className="text-center py-24">Users</h2>
-        <div className="flex w-full justify-center">
-          <div className="flex flex-wrap w-1/2 justify-between">
+        <div className="container mx-auto  py-24 px-4 lg:px-24">
+          <h2 className="text-3xl font-bold text-center mb-8 text-indigo-800">
+            User List
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8">
             {users &&
               users.map((eachUser, index) => (
-                <Link key={index} className="my-5 shadow shadow-lg bg-blue-500 rounded-sm p-4" style={{width: isMobile ? '100%' : '30%' }} href={`/user/${eachUser.username}`}>
-                  <div className="">
-                    <div>{eachUser.id}</div>
-                    <div>{eachUser.name}</div>
-                    <div>{eachUser.email}</div>
+                <Link key={index} href={`/user/${eachUser.username}`}>
+                  <div className="bg-white rounded-md shadow-md p-6 hover:shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+                    <div className="mb-2 text-lg font-semibold text-indigo-800">
+                      {eachUser.name}
+                    </div>
+                    <div className="text-gray-600">{eachUser.email}</div>
                   </div>
                 </Link>
               ))}
           </div>
         </div>
-        </div>
-     
       )}
     </main>
   );

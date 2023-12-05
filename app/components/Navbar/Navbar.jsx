@@ -24,7 +24,7 @@ const Navbar = () => {
 
   return (
     <>
-      <section className={`${styles.navbar} flex m-0 py-4 px-10 lg:px-20`}>
+      <section className={`${styles.navbar} flex m-0 py-4 px-10 lg:px-20 z-10`}>
       <Link href="/" className="w-1/2">
       <Image
           src={Logo}
