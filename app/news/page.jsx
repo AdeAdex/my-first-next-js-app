@@ -10,7 +10,8 @@ const NewsPage = () => {
     const fetchNews = async () => {
       try {
         const newsData = await displayNews();
-        setNews(newsData);
+        // setNews(newsData);
+        setNews(newsData.allNews);
       } catch (error) {
         console.error("Error fetching news data:", error);
       }
@@ -25,10 +26,12 @@ const NewsPage = () => {
         News List
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {news.map((newsItem) => (
+        {news.map((newsItem, index) => (
           <Link
-            href={`/news/${newsItem.title}`}
-            key={newsItem.id}
+            href={`/news/${newsItem.id}`}
+            // href={`/news/[title]`}
+          // as={`/news/${encodeURIComponent(newsItem.title)}`}
+            key={index}
             className="border text-blue-600 border-gray-300 bg-white rounded-md p-6"
           >
             <h3 className="text-2xl font-bold mb-4">{newsItem.title}</h3>
