@@ -28,9 +28,9 @@ const NewsPage = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {news.map((newsItem, index) => (
           <Link
-            href={`/news/${newsItem.id}`}
-            // href={`/news/[title]`}
-          // as={`/news/${encodeURIComponent(newsItem.title)}`}
+            // href={`/news/${newsItem.title}`}
+            href={`/news/[id]`}
+            as={`/news/${encodeURIComponent(newsItem.id)}`}
             key={index}
             className="border text-blue-600 border-gray-300 bg-white rounded-md p-6"
           >
